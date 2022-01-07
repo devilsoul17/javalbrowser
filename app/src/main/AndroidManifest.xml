@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.santhosh.browser_app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Browser_APP"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".downloads"
+            android:exported="false" />
+        <activity
+            android:name=".socialmedia"
+            android:exported="false" />
+        <activity
+            android:name=".about"
+            android:exported="false" />
+        <activity
+            android:name=".BrowserSettings"
+            android:exported="false" />
+        <activity
+            android:name=".ScanQrCodeSecond"
+            android:exported="false" />
+        <activity
+            android:name=".ScanQrCode"
+            android:exported="false" />
+        <activity
+            android:name=".bookmarks"
+            android:exported="false" />
+        <activity
+            android:name=".history"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="www.facebook.com" />
+                <data android:host="m.facebook.com" />
+                <data android:host="facebook.com" />
+                <data android:host="www.google.com" />
+                <data android:host="m.google.com" />
+                <data android:host="google.com" />
+                <data android:host="www.youtube.com" />
+                <data android:host="m.youtube.com" />
+                <data android:host="youtube.com" />
+                <data android:host="www.instagram.com" />
+                <data android:host="m.instagram.com" />
+                <data android:host="instagram.com" />
+                <data android:host="www.dailymotion.com" />
+                <data android:host="m.dailymotion.com" />
+                <data android:host="dailymotion.com" />
+                <data android:host="www.drive.google.com" />
+                <data android:host="m.drive.google.com" />
+                <data android:host="drive.google.com" />
+                <data android:host="www.twitter.com" />
+                <data android:host="m.twitter.com" />
+                <data android:host="twitter.com" />
+                <data android:host="www.linkedin.com" />
+                <data android:host="m.linkedin.com" />
+                <data android:host="linkedin.com" />
+                <data android:host="www.pinterest.com" />
+                <data android:host="m.pinterest.com" />
+                <data android:host="pinterest.com" />
+                <data android:host="www.trailhead.salesforce.com" />
+                <data android:host="m.trailhead.salesforce.com" />
+                <data android:host="trailhead.salesforce.com" />
+                <data android:host="www.spotify.com" />
+                <data android:host="m.spotify.com" />
+                <data android:host="spotify.com" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
