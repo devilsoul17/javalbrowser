@@ -58,7 +58,7 @@
         android:layout_weight="0.1"
         android:background="@drawable/actionbar_bg"
         android:orientation="horizontal"
-        android:weightSum="5">
+        android:weightSum="7">
 
         <ImageButton
             android:layout_width="wrap_content"

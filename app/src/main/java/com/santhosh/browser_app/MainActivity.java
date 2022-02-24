@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_CODE_SPEECH_INPUT = 1000;
     ImageButton btnrefresh, btnmic, searchbtn, back;
-    ImageButton more, forward, stop, refbtn, home, btnbookmark;
+    ImageButton more, forward, stop, refbtn, home, incognito, btnbookmark;
     Button btntvForTab;
     EditText edittexturl;
     WebView webView;
@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         stop = (ImageButton) findViewById(R.id.stop);
         refbtn = (ImageButton) findViewById(R.id.refbtn);
         home = (ImageButton) findViewById(R.id.home);
+//        incognito = (ImageButton) findViewById(R.id.incognito);
         more = (ImageButton) findViewById(R.id.more);
         btntvForTab = findViewById(R.id.btnTextViewForTab);
         btnbookmark = findViewById(R.id.btnAddtobookmarks);
@@ -246,6 +247,13 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+                sheetView.findViewById(R.id.incognito).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(MainActivity.this, "Incognito mode is currently not available", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
                 sheetView.findViewById(R.id.socialmedia).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -367,6 +375,8 @@ public class MainActivity extends AppCompatActivity {
                 webView.loadUrl("https://google.com");
             }
         });
+
+
 
         btnbookmark.setOnClickListener(new View.OnClickListener() {
             @Override
